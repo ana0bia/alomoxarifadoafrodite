@@ -1,6 +1,6 @@
 ﻿namespace AlmoxarifadoBackAPI.Models
 {
-    public class Categoria
+    public class Secretaria
     {
         public int Codigo { get; set; }
 

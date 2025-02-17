@@ -1,6 +1,7 @@
 ﻿using AlmoxarifadoBackAPI.DTO;
 using AlmoxarifadoBackAPI.Models;
 using AlmoxarifadoBackAPI.Repositorio;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +17,7 @@ namespace AlmoxarifadoBackAPI.Controllers
             _db = db;
 
         }
-
+        [Authorize]
         [HttpGet("/lista")]
         public IActionResult listaCategorias()
         {
