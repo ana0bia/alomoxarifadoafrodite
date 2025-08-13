@@ -1,6 +1,6 @@
 ﻿namespace AlmoxarifadoBackAPI.DTO
 {
-    public class SaidaCadastroDTO
+    public class SecretariaCadastroDTO
     {
       
 

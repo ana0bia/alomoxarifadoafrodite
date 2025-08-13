@@ -8,23 +8,23 @@ namespace AlmoxarifadoBackAPI.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class SaidaController : ControllerBase
+    public class SecretariaController : ControllerBase
     {
-        private readonly ISaidaRepositorio _db;
-        public SaidaController(ISaidaRepositorio db)
+        private readonly ISecretariaRepositorio _db;
+        public Secretariaontroller(ISecretariaRepositorio db)
         {
             _db =db;
       
         }
 
-        [HttpGet("/listaSaida")]
-        public IActionResult listaSaida()
+        [HttpGet("/listaSecretaria")]
+        public IActionResult listaSecretaria()
         {
             return Ok(_db.GetAll());
         }
 
-        [HttpPost("/Saida")]
-        public IActionResult listaEntrada(SaidaDTO saida)
+        [HttpPost("/Secretaria")]
+        public IActionResult listaEntrada(SecretariaDTO saida)
         {
             return Ok(_db.GetAll().Where(x=>x.Codigo==saida.Codigo));
         }
